@@ -9,15 +9,15 @@ function iniciar(route, handle) {
     
     console.log("Petición para " + pathname + " recibida.");    
     
-    response.writeHead(200, {"Content-Type": "text/html"});
+    //response.writeHead(200, {"Content-Type": "text/html"});
+    //let content = route(handle, pathname);    
+    //response.write(content);
+    //response.end();
+    route(handle, pathname, response);
 
-    let content = route(handle, pathname);
-
-    response.write(content);
-    response.end();
   }
 
-  http.createServer(onRequest).listen(8888);
+  http.createServer(onRequest).listen(3333);
   console.log("Servidor Iniciado.");
 
 }
