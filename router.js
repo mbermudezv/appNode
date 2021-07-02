@@ -9,7 +9,7 @@ function route(handle, pathname, response) {
     } else {
       
       console.log("No se encontro manipulador para " + pathname);
-      //return "404 No Encontrado";
+      
       response.writeHead(404, {"Content-Type": "text/html"});
       response.write("404 No Encontrado");
       response.end();
